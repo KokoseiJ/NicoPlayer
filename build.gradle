@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+group 'ga.kokoseij'
+version '1.0'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'NicoPlayer'
+    }
+}
+
+shadowJar {
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'org.json:json:20190722'
+}
